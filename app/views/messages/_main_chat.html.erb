@@ -12,24 +12,7 @@
 </div>
 
 <div class="messages">
-  <div class="message">
-  <div class="upper-message">
-    <div class="chatting-name">ユーザー名</div>
-    <div class="created-time">時刻</div>
-  </div>
-  <div class= "lower-message">
-    <div class="message-content">メッセージ</div>
-  </div>
-  </div>
-    <div class="message">
-  <div class="upper-message">
-    <div class="chatting-name">ユーザー名</div>
-    <div class="created-time">時刻</div>
-  </div>
-  <div class= "lower-message">
-    <div class="message-content">メッセージ</div>
-  </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
